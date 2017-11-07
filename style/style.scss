@@ -6,12 +6,12 @@ body {
     img {
         width: 15%;
         margin: 2.5% 0;
-        &:hover {
-            width: 25%;
-            transition: 1s;
-        }
     }
     .hide {
-        display:none;
+        display: none;
+    }
+    .flip {
+        transform: perspective(500px) rotateY(-360deg);
+        transition: all 1s;
     }
 }

@@ -6,8 +6,8 @@ body {
   body img {
     width: 15%;
     margin: 2.5% 0; }
-    body img:hover {
-      width: 25%;
-      transition: 1s; }
   body .hide {
     display: none; }
+  body .flip {
+    transform: perspective(500px) rotateY(-360deg);
+    transition: all 1s; }
