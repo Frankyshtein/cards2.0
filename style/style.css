@@ -1,0 +1,13 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center; }
+  body img {
+    width: 15%;
+    margin: 2.5% 0; }
+    body img:hover {
+      width: 25%;
+      transition: 1s; }
+  body .hide {
+    display: none; }
