@@ -23,6 +23,8 @@ body {
     top: 7.5%;
     height: 85%;
     width: 30%; }
+  .module .close {
+    display: none; }
 
 .hide {
   display: none; }
