@@ -1,6 +1,6 @@
 var answer;
 console.log(deck)
-if(deck == false){
+if(!deck){
     var deck = $(".wrapper img");
     console.log(deck)
 }
