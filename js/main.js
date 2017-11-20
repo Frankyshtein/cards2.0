@@ -1,11 +1,14 @@
 var answer;
+console.log(deck)
+if(deck == false){
+    var deck = $(".wrapper img");
+    console.log(deck)
+}
 
 function large() {
     $(".module img").remove();
     $(".module").on('click', small);
-//    $(".module .close").on('click', small);
     answer = $(this).index() + 2;
-    //    answer = $(".wrapper img:nth-child("+a+")");
     $(this).clone().appendTo($(".module"));
     $(".module").fadeIn(400, function () {
         $(".module img").on('click', flip);
@@ -14,7 +17,6 @@ function large() {
 
 function small(e) {
     var target = $(e.target);
-    console.log(target)
     if (!target.parents().hasClass('module') || target.hasClass("close") || target.parents().hasClass("close")) {
         $(".module").fadeOut(400);
     }
