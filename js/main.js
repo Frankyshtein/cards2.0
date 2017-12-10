@@ -18,7 +18,7 @@ function build() {
 
 function toTheEnd() {
     deck.push(deck[current]);
-    deck.push(deck[current+1]);
+    deck.push(deck[current + 1]);
     console.log(deck[current]);
     deck.splice(current, 2);
     localStorage.setItem('deck', JSON.stringify(deck));
@@ -31,26 +31,38 @@ function large() {
     answer = $(this).index() + 2;
     $(this).clone().appendTo($(".module"));
     $(".module").fadeIn(400, function () {
+        $(".wrapper img:nth-child(" + answer + ")").removeClass("hide").lazyLoadXT({
+            show: true
+        });
+        setTimeout(function () {
+            $(".wrapper img:nth-child(" + answer + ")").addClass("hide")
+        }, 10);
         $(".module img").on('click', flip);
     });
 }
 
 function small(e) {
+
     var target = $(e.target);
     if (!target.parents().hasClass('module') || target.hasClass("close") || target.parents().hasClass("close")) {
         build();
         $(".module").fadeOut(400);
+        $(".module").off();
     }
 }
 
 function flip() {
     toTheEnd();
     $(this).addClass("flip");
+    //    $(".wrapper img:nth-child(" + answer + ")").addClass("hide");
     setTimeout(function () {
+
         $(".module img").remove();
         $(".wrapper img:nth-child(" + answer + ")").clone().appendTo($(".module"));
-        $(".module img").removeClass("hide").lazyLoadXT({show: true});
-        
+        $(".module img").removeClass("hide").lazyLoadXT({
+            show: true
+        });
+
     }, 1000);
 }
 build();
