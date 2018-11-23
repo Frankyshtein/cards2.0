@@ -1,2 +1,2 @@
-# cards2.0
-play cards
+Code Cards had been made in the summer of 2014 by <a href='https://dribbble.com/carlosxcl'>Carlos Lagrange</a> and <a href='https://twitter.com/mariogintili'>Mario Gintili</a>. 
+This is a simple app to browse them sometimes. Mobile version available.

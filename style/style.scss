@@ -20,10 +20,11 @@ body {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 15cm;
     img {
         position: absolute;
         left: 35%;
-        ;
         top: 7.5%;
         height: 85%;
         width: 30%;
@@ -38,8 +39,8 @@ body {
 }
 
 .flip {
-    transform: perspective(500px) rotateY(-360deg);
-    opacity: 0;
+    transform:rotateY(360deg);
+    opacity: 0; 
     transition: all 1s;
 }
 
